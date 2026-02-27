@@ -25,7 +25,8 @@ public class Match {
     @NotBlank
     String competition;
 
-    @OneToOne(mappedBy = "match")
+    @ManyToOne
+    @JoinColumn(name = "club_id", nullable = false)
     Club club;
 
 
